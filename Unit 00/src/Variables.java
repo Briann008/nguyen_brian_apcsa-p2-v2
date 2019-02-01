@@ -23,7 +23,7 @@ public class Variables
 		long longOne = (Long.MAX_VALUE);
 		float floatOne = (Float.MAX_VALUE);
 		double doubleOne = (Double.MAX_VALUE);
-		char charOne = (0);
+		char charOne = ('A');
 		boolean boolOne = true;
 		String strOne = ("You can have things like this ");
 		
@@ -51,15 +51,15 @@ public class Variables
 		System.out.println("____________________________________________");
 		
 		System.out.println("\nDecimal types:");
-		System.out.println("32 bits - floatOne"+floatOne);
-		System.out.println("64 bits - doubleOne"+doubleOne);
+		System.out.println("32 bits - floatOne "+floatOne);
+		System.out.println("64 bits - doubleOne "+doubleOne);
 		System.out.println("____________________________________________");
 
 		
 		System.out.println("\nOther types:");
-		System.out.println("Single character - charOne"+charOne);
-		System.out.println("True or false boolean - boolOne"+boolOne);
-		System.out.println("String is any finite sequence of characters - strOne"+strOne);
+		System.out.println("Single character - charOne "+charOne);
+		System.out.println("True or false boolean - boolOne "+boolOne);
+		System.out.println("String is any finite sequence of characters - strOne "+strOne);
 		
 		
 
