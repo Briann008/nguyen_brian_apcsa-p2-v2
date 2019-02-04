@@ -18,10 +18,7 @@ public class Distance
 	//Constructor 
 	public Distance()
 	{
-		xOne = 0;
-		yOne = 0;
-		xTwo = 0;
-		yTwo = 0;
+		setCoordinates(0, 0, 0, 0);
 		distance = 0.0;
 	}
 	
@@ -76,6 +73,6 @@ public class Distance
 	//Execute String
 	public String toString()
 	{
-		return "";
+		return "X1: " + xOne + "   Y1: " + yOne + "   X2: " + xTwo + "   Y2: " + yTwo + "   Distance == " + String.format("%.3f", distance);
 	}
 }

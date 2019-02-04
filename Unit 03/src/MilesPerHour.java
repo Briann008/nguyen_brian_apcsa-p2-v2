@@ -20,16 +20,24 @@ public class MilesPerHour
 		setNums(0,0,0);
 		mph=0.0;
 	}
+	//Constructor
 
 	public MilesPerHour(int dist, int hrs, int mins)
 	{
-		
+		setNums(dist,hrs,mins);
+		calcMPH();
 	}
+	//If Coder wants to changes
 
+	//Setter for the users
 	public void setNums(int dist, int hrs, int mins)
 	{
+		distance = dist;
+		hours = hrs;
+		minutes = mins;
 	}
 
+	//Constructors
 	public void calcMPH()
 	{
 	}
