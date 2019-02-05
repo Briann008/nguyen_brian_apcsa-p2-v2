@@ -17,6 +17,11 @@ public class NumberVerifyRunner
 		System.out.println("5 is odd :: " + NumberVerify.isOdd(5));
 		System.out.println("5 is even :: " + NumberVerify.isEven(5));
 		
+		System.out.println("6 is odd :: " + NumberVerify.isOdd(6));
+		System.out.println("6 is even :: " + NumberVerify.isEven(6));
+		
+		System.out.print(5 % 2);
+		
 		//add in more test cases
 	}
 }
