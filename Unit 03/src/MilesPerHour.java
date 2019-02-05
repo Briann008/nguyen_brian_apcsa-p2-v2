@@ -40,10 +40,24 @@ public class MilesPerHour
 	//Constructors
 	public void calcMPH()
 	{
+		double minuteCalc = minutes/60.0;
+		if (hours >= 1 && minutes >= 0)
+		{
+			mph = (distance / hours)/minuteCalc;
+		}
+		else if (hours == 0)
+		{
+			mph = distance/minuteCalc;
+		}
+		else if (minutes == 0)
+		{
+			mph = distance/hours;
+		}
 	}
 
 	public void print()
 	{
+		out.println(distance + " miles " + hours + " hour " + minutes + " minutes = " + String.format("%.1f", mph) +  " MPH.");
 	}
 	
 	//create a print or toString or both
