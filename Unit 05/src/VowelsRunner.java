@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Brian Nguyen
+//Date - 2/7/2019
 
 public class VowelsRunner
 {
@@ -19,10 +19,9 @@ public class VowelsRunner
 		System.out.println(  s.go(  "##wowgira77##eplus")    );
 		System.out.println(  s.go(  "catsandaplusdogsaplus###")    );
 		System.out.println(  s.go(  "7")    );
-		System.out.println(  s.go(  "a")    );
+		System.out.println(  s.go(  "A")    );
 		System.out.println(  s.go(  "E")    );
-		System.out.println(  s.go(  "9AEIOUaeiou8")    );
+		System.out.println(  s.go(  "9AEIOUaeiou@")    );
+
 	}
 }
-
-

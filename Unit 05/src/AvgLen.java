@@ -1,12 +1,14 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Brian Nguyen
+//Date - 2/7/2019
 
 public class AvgLen
 {
    public static double go( String a, String b )
 	{
-		return 0;
+	   double sum;
+	   sum = (double)(a.length()+b.length())/2;
+	   return sum;
 	}
 }

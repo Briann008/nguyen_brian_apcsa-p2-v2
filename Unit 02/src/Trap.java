@@ -1,8 +1,8 @@
 //© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Brian
+//Date - 2/4/2019
+//Class - APCSA
+//Lab  - TrapRunner
 
 public class Trap
 {

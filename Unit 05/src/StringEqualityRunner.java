@@ -12,7 +12,6 @@ public class StringEqualityRunner
 {
 	public static void main( String args[] )
 	{
-		//add test cases
-		
+	
 	}
 }

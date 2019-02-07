@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Brian Nguyen
+//Date - 2/7/2019
 
 public class AvgLenRunner
 {
