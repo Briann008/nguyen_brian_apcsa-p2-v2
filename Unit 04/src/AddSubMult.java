@@ -1,6 +1,7 @@
 //(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
+// www.apluscompsci.com
+//Name - Brian Nguyen
+//Date - 2/11/2019
 
 import static java.lang.System.*; 
 import java.util.Scanner;
