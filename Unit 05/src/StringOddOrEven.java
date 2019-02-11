@@ -1,10 +1,8 @@
 //(c) A+ Computer Science
-//www.apluscompsci.com
-
-//Name -
-//Date - 
-//Class -
-//Lab  -
+// www.apluscompsci.com
+//Name - Brian Nguyen
+//Date - 2/11/2019
+//Class - APCSPA
 
 import static java.lang.System.*;
 import java.util.Scanner;
