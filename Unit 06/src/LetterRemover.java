@@ -28,7 +28,12 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		String cleaned=sentence;
+		String cleaned = sentence;
+		
+		for(int i = 0; i < cleaned.length(); i++)
+		{
+			
+		}
 		return cleaned;
 	}
 
