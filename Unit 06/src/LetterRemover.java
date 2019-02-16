@@ -28,17 +28,13 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		String cleaned = sentence;
-		
-		for(int i = 0; i < cleaned.length(); i++)
-		{
-		
-		}
-		return cleaned;
+		String cleaned;
+		cleaned = sentence.replace(lookFor,' ');
+		return cleaned.trim();
 	}
 
 	public String toString()
 	{
-		return sentence + " - letter to remove " + lookFor;
+		return sentence + " - letter to remove " + lookFor + "\n" + removeLetters();
 	}
 }
