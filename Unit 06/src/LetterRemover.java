@@ -32,7 +32,7 @@ public class LetterRemover
 		
 		for(int i = 0; i < cleaned.length(); i++)
 		{
-			
+		
 		}
 		return cleaned;
 	}

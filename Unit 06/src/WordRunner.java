@@ -17,7 +17,7 @@ public class WordRunner
 		System.out.println(word);
 		
 		word.setString("JukeBox");
-		System.out.println(word);
+		System.out.println(word);		
 		
 		word.setString("TCEA");
 		System.out.println(word);
