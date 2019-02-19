@@ -35,11 +35,6 @@ public class Magpie4
 		{
 			response = "Say something, please.";
 		}
-
-		else if (findKeyword(statement, "no") >= 0)
-		{
-			response = "Why so negative?";
-		}
 		else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
@@ -47,28 +42,33 @@ public class Magpie4
 		{
 			response = "Tell me more about your family.";
 		}
-
-		// Responses which require transformations
-		else if (findKeyword(statement, "I want to", 0) >= 0)
+		else if(findKeyword(statement, "dog") >= 0 || findKeyword(statement, "cat") >= 0)
 		{
-			response = transformIWantToStatement(statement);
+			response = "Tell me more about your pets.";
 		}
-
+		else if(findKeyword(statement, "mauro") >= 0)
+		{
+			response = "Well they sound like a swell teacher.";
+		}
+		else if(findKeyword(statement, "food") >= 0)
+		{
+			response = "What's your favorite spicy food?";
+		}
+		else if(findKeyword(statement, "color") >= 0)
+		{
+			response = "What's your favorite color?";
+		}
+		else if(findKeyword(statement, "sure") >= 0 || findKeyword(statement, "okay") >= 0)
+		{
+			response = "Let's talk about anything then, like family, like your mother's age.";
+		}
+		else if (findKeyword(statement, "no") >= 0)
+		{
+			response = "Why so negative?";
+		}
 		else
 		{
-			// Look for a two word (you <something> me)
-			// pattern
-			int psn = findKeyword(statement, "you", 0);
-
-			if (psn >= 0
-					&& findKeyword(statement, "me", psn) >= 0)
-			{
-				response = transformYouMeStatement(statement);
-			}
-			else
-			{
-				response = getRandomResponse();
-			}
+			response = getRandomResponse();
 		}
 		return response;
 	}

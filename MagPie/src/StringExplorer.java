@@ -29,6 +29,7 @@ public class StringExplorer
 			System.out.println("slow is not found");
 		
 		String str = "Computer Science is the best, the greatest, and the most wonderful subject to study!";
+		int counter = 0;
 		System.out.println(str);
 		for(int i = 0; i < str.length(); i++)
 		{
@@ -37,9 +38,10 @@ public class StringExplorer
 			{
 				System.out.println("From the phrase given the word the is found in position " + theWord);
 				i = theWord;
-			}
+				counter = counter + 1;
+			} 
 		}
-
+		System.out.println("The occurs " + counter + " times.");
 	}
 
 }

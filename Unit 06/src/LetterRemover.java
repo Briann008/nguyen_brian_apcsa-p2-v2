@@ -30,7 +30,8 @@ public class LetterRemover
 	{
 		String cleaned = sentence;
 		int charPlace = sentence.indexOf(lookFor);
-		while(charPlace >= 0){
+		while(charPlace != -1)
+		{
 			cleaned = cleaned.substring(0,charPlace) + cleaned.substring(charPlace+1, cleaned.length());
 			charPlace = cleaned.indexOf(lookFor);
 		}
