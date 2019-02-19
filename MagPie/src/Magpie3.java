@@ -34,36 +34,16 @@ public class Magpie3
 		{
 			response = "Say something, please.";
 		}
+		else if (findKeyword(statement, "no") >= 0)
+		{
+			response = "Why so negative?";
+		}
 		else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
-		}
-		else if(findKeyword(statement, "dog") >= 0 || findKeyword(statement, "cat") >= 0)
-		{
-			response = "Tell me more about your pets.";
-		}
-		else if(findKeyword(statement, "mauro") >= 0)
-		{
-			response = "Well they sound like a swell teacher.";
-		}
-		else if(findKeyword(statement, "food") >= 0)
-		{
-			response = "What's your favorite spicy food?";
-		}
-		else if(findKeyword(statement, "color") >= 0)
-		{
-			response = "What's your favorite color?";
-		}
-		else if(findKeyword(statement, "sure") >= 0 || findKeyword(statement, "okay") >= 0)
-		{
-			response = "Let's talk about anything then, like family, like your mother's age.";
-		}
-		else if (findKeyword(statement, "no") >= 0)
-		{
-			response = "Why so negative?";
 		}
 		else
 		{
@@ -164,7 +144,7 @@ public class Magpie3
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 6;
+		final int NUMBER_OF_RESPONSES = 4;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -185,17 +165,8 @@ public class Magpie3
 		{
 			response = "You don't say.";
 		}
-		else if(whichResponse == 4)
-		{
-			response = "That sounds like something else.";
-		}
-		else if(whichResponse == 5)
-		{
-			response = "REALLY?!";	
-		}
 
 		return response;
 	}
-	//Test
 
 }
