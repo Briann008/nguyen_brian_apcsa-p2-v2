@@ -29,7 +29,7 @@ public class LetterRemover
 	public String removeLetters()
 	{
 		String cleaned = sentence;
-		int charPlace = sentence.indexOf(lookFor);
+		int charPlace = cleaned.indexOf(lookFor);
 		while(charPlace != -1)
 		{
 			cleaned = cleaned.substring(0,charPlace) + cleaned.substring(charPlace+1, cleaned.length());

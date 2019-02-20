@@ -7,10 +7,8 @@ public class TesterClass
 {
 	public static void main ( String[] args )
 	{
-		Random rand = new Random();
-		for(int i = 0; i < 20; i++)
-		{
-		System.out.println(rand.nextInt(3));
-		}
+		String str = "Testing";
+		System.out.println(str.substring(0,1));
+		System.out.println(str.indexOf("e"));
 	}
 }
