@@ -1,14 +1,33 @@
-
-import java.lang.Math;
-import java.util.Random;
-
-
 public class TesterClass
 {
 	public static void main ( String[] args )
-	{
-		String str = "Testing";
-		System.out.println(str.substring(0,1));
-		System.out.println(str.indexOf("e"));
-	}
+	{	
+		char letter = 'C';
+		int amount = 4;
+		int outputAmount = 0;
+		int amountofLetters = 0;
+		char upLetters = letter;
+		
+		for(int a = 1; a <= amount; a++)	//Controls How Many times it would run
+		{
+			for(int b = 0; b < amount; b++) //Controls The Letters
+			{	
+				
+				upLetters = (char)(letter + b);
+				for(int c = amountofLetters; c < amount; c++) //Controls the number of times the letter shows up
+				{
+					if(outputAmount < amount) 
+					{
+						System.out.print(upLetters);
+					}
+				}
+				System.out.print(" ");
+				outputAmount += 1;
+				amountofLetters += 1;
+			}
+			outputAmount = 0 + a;
+			amountofLetters = 0;
+			System.out.println("");
+		}
+	}	
 }

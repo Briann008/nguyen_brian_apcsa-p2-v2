@@ -30,7 +30,6 @@ public class TriangleFive
 	{
 		amount = amt;
 	}
-
 	public String toString()
 	{
 		String output="";
