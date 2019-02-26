@@ -10,15 +10,17 @@ public class RayDown
 	public static boolean go(int[] numArray)
 	{
 		boolean decrease = false;
+		boolean goingDown = true;
 		for(int i = 0; i < numArray.length-1; i++)
 		{
-			if(numArray[i] > numArray[i+1])
+			if(numArray[i] > numArray[i+1] && goingDown != false)
 			{
 				decrease = true;
 			}
 			else
 			{
 				decrease = false;
+				goingDown = false;
 			}
 		}
 		if(numArray.length != 1)
