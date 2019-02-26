@@ -26,8 +26,7 @@ public class DoubleRunner
 		run.setDoubles(4.5, 16.7, -7.8, -9.0);
 		System.out.println(run);
 		
-
-		//add more test cases
+		
 				
 	}
 }
