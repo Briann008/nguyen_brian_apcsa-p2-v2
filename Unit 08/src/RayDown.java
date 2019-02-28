@@ -13,7 +13,7 @@ public class RayDown
 		boolean goingDown = true;
 		for(int i = 0; i < numArray.length-1; i++)
 		{
-			if(numArray[i] > numArray[i+1] && goingDown != false)
+			if(numArray[i] > numArray[i+1] && goingDown)
 			{
 				decrease = true;
 			}
