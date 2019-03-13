@@ -6,20 +6,11 @@ package ElevensActivity;
  * <code>Card</code> represents a playing card.
  */
 public class Card {
-
-	/**
-	 * String value that holds the suit of the card
-	 */
+	
 	private String suit;
-
-	/**
-	 * String value that holds the rank of the card
-	 */
+	//String value that holds the rank of the card 
 	private String rank;
-
-	/**
-	 * int value that holds the point value.
-	 */
+	//int value that holds the point value.
 	private int pointValue;
 
 
@@ -33,36 +24,50 @@ public class Card {
 	 * @param cardPointValue an <code>int</code> value
 	 *                  containing the point value of the card
 	 */
-	public Card(String cardRank, String cardSuit, int cardPointValue) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-	}
 
+	public Card()
+	{
+		cardSetter("","",0);
+	}
+	public Card(String cardRank, String cardSuit, int cardPointValue) 
+	{
+		cardSetter(cardRank, cardSuit, cardPointValue);
+	}
+	public void cardSetter(String cardRank, String cardSuit, int cardPointValue)
+	{
+		suit = cardSuit;
+		rank = cardRank;
+		pointValue = cardPointValue;
+	}
 
 	/**
 	 * Accesses this <code>Card's</code> suit.
 	 * @return this <code>Card's</code> suit.
 	 */
-	public String suit() {
+	public String suit() 
+	{
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return null;
+		return suit;
    }
 
 	/**
 	 * Accesses this <code>Card's</code> rank.
 	 * @return this <code>Card's</code> rank.
 	 */
-	public String rank() {
+	public String rank() 
+	{
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return null;
+		return rank;
 	}
 
    /**
 	 * Accesses this <code>Card's</code> point value.
 	 * @return this <code>Card's</code> point value.
 	 */
-	public int pointValue() {
+	public int pointValue() 
+	{
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return 0;
+		return pointValue;
 	}
 
 	/** Compare this card with the argument.
@@ -71,9 +76,14 @@ public class Card {
 	 *              are equal to those of the argument;
 	 *         false otherwise.
 	 */
-	public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return false;
+	public boolean matches(Card otherCard) 
+	{
+		boolean match = false;
+		if(suit == otherCard.suit() && rank == otherCard.rank() && pointValue == otherCard.pointValue())
+		{
+			match = true;
+		}
+		return match;
 	}
 
 	/**
@@ -87,8 +97,9 @@ public class Card {
 	 *         and point value of the card.
 	 */
 	@Override
-	public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return null;
+	public String toString() 
+	{
+		String output = rank + " of " + suit + "(point value = " + pointValue + " )";
+		return output;
 	}
 }
