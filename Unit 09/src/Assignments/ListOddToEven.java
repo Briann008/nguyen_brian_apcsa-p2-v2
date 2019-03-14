@@ -32,6 +32,8 @@ public class ListOddToEven
 				oddsPlace = i;
 			}
 		}
+		if(odd == false)
+			return -1;
 		return evensPlace - oddsPlace;
 	}
 }

@@ -9,6 +9,9 @@ public class TriangleWordRunner
 {
 	public static void main( String args[] )
 	{
-		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Enter a word :: ");
+		String word = keyboard.nextLine();
+		TriangleWord.printTriangle(word);
 	}
 }
