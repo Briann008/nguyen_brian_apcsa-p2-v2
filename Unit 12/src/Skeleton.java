@@ -64,6 +64,7 @@ public class Skeleton implements Monster
 	{
 		String output = getName() + " " + getHowBig() + "\n";
 		
+		
 		return output;
 	}
 }
