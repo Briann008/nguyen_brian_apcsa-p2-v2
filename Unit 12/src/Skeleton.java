@@ -37,7 +37,7 @@ public class Skeleton implements Monster
 	@Override
 	public boolean isBigger(Monster other) 
 	{
-		if(other.getHowBig() > getHowBig())
+		if(other.getHowBig() < getHowBig())
 			return true;
 		else
 			return false;
@@ -45,7 +45,7 @@ public class Skeleton implements Monster
 	@Override
 	public boolean isSmaller(Monster other)
 	{
-		if(other.getHowBig() < getHowBig())
+		if(other.getHowBig() > getHowBig())
 			return true;
 		else
 			return false;
@@ -63,7 +63,6 @@ public class Skeleton implements Monster
 	public String toString()
 	{
 		String output = getName() + " " + getHowBig() + "\n";
-		if(isBigger)
 		
 		return output;
 	}
