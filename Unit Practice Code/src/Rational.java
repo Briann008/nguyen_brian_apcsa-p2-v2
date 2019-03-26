@@ -6,12 +6,25 @@ import static java.lang.System.*;
 
 class Rational implements Comparable<Rational>
 {
-	//add two instance variables
+	private int num;
+	private int den;
+	
+	
+	public Rational()
+	{
+		setRational(0,0);
+	}
+	public Rational(int numbOne, int numbTwo)
+	{
+		setRational(numbOne,numbTwo);
+	}
 
-	//write two constructors
 
-
-	//write a setRational method
+	public void setRational(int numberOne, int numberTwo)
+	{
+		num = numberOne;
+		den = numberTwo;
+	}
 	
 
 	//write  a set method for numerator and denominator

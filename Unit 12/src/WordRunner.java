@@ -24,9 +24,20 @@ public class WordRunner
 			words.add(new Word(filesWords));
 		}
 		
-
-		words.sort((i,j) -> i.compareTo(j));
-		for(Word theWords: words)
+		ArrayList<Word> sorted = new ArrayList<>();
+		Word min = words.get(0);
+		while(words.size() > 0) {
+			min = words.get(0);
+			for(Word i : words) {
+				if (min.compareTo(i) > 0) {
+					min = i;
+				}
+			}
+			sorted.add(min);
+			words.remove(min);
+		}
+		
+		for(Word theWords: sorted)
 		{
 			System.out.println(theWords);
 		}
