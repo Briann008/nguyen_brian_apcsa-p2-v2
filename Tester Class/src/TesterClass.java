@@ -5,11 +5,16 @@ public class TesterClass
 {
 	public static void main ( String[] args )
 	{	
-		Random rand = new Random();
-		int randNumber = rand.nextInt(10-1+1) + 1;
-		for(int i = 0; i <10 ; i++){
-			System.out.println(randNumber);
-			randNumber = rand.nextInt(10)+1;
+		int num = 20;
+		int den = 5;
+		for(int i = 1; i < num/2;i++)
+		{
+			if(num % i == 0 && den % i == 0 )
+			{
+				num = num/i;
+				den = den/i;
+			}
 		}
+		System.out.println(num + " " + den);
 	}
 }

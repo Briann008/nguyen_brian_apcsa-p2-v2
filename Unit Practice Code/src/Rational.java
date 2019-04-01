@@ -12,79 +12,120 @@ class Rational implements Comparable<Rational>
 	
 	public Rational()
 	{
-		setRational(0,0);
+		setRational(1,1);
 	}
 	public Rational(int numbOne, int numbTwo)
 	{
 		setRational(numbOne,numbTwo);
 	}
 
-
 	public void setRational(int numberOne, int numberTwo)
 	{
 		num = numberOne;
 		den = numberTwo;
+		reduce();
 	}
-	
-
-	//write  a set method for numerator and denominator
-
 	
 	public void add(Rational  other)
 	{
-		//num1/den1 + num2/den2 
-		//new numerator = (num1 * den2 + num2 * den1)
-		//new denominator = (den1 * den2)
-		
-		
-
-
+		other.reduce(); 
+		num = (num * other.getDen()) + (other.getNum() * den);
+		den = other.getDen() * den;
 		reduce();
 	}
 
 	private void reduce()
 	{
-
-
-
+		
+		if(den < 0)
+		{
+			num = num * -1;
+			den = den * -1;
+		}
+		if(num > den) 
+		{
+			for(int i = 1; i < num;i++)
+			{
+				if(num % i == 0 && den % i == 0 )
+				{
+					num = num/i;
+					den = den/i;
+				}
+			}
+		}
+		else 
+		{
+			for(int i = 1; i < den;i++)
+			{
+				if(num % i == 0 && den % i == 0 )
+				{
+					num = num/i;
+					den = den/i;
+				}
+			}
+		}
 	}
 
 	private int gcd(int numOne, int numTwo)
 	{
-
-
-		return 1;
+		return numOne*numTwo;
 	}
 
 	public Object clone ()
 	{
-		return "";
+		return new Rational(num,den);
 	}
 
-
-	//ACCESSORS
-
-	//write get methods for numerator and denominator
-	
+	public int getNum() 
+	{
+		return num;
+	}
+	public int getDen()
+	{
+		return den;
+	}	
 	
 	public boolean equals( Object obj)
 	{
-
-
-		return false;
+		if(obj.getClass() != this.getClass())
+		{
+			return false;
+		}
+		else
+		{
+			Rational rat = (Rational)obj;
+			if(rat.getDen() == this.getDen() && rat.getNum() == this.getNum())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 	}
 
 	public int compareTo(Rational other)
 	{
-
-
-		return -1;
+		double firstDecimal = (double)num/den;
+		double secondDecimal = (double)other.getNum()/other.getDen();
+		return Double.compare(firstDecimal, secondDecimal);
 	}
 
 
 
 	
 	//write  toString() method
+	public String toString()
+	{
+		if(num == den)
+		{
+			num = 1;
+			den = 1;
+		}
+		String output = num + "/" + den;
+		return output;
+	}
 	
 	
 }
