@@ -62,7 +62,7 @@ public class Paddle extends Block
 
    public String toString()
    {
-	   String output = x + " " + y;
+	   String output = super.getX() + " " + super.getY();
 	   return output;
    }
 }
