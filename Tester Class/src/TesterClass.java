@@ -5,16 +5,10 @@ public class TesterClass
 {
 	public static void main ( String[] args )
 	{	
-		int num = 20;
-		int den = 5;
-		for(int i = 1; i < num/2;i++)
-		{
-			if(num % i == 0 && den % i == 0 )
-			{
-				num = num/i;
-				den = den/i;
-			}
-		}
-		System.out.println(num + " " + den);
+		int[] kat = new int[5];
+		kat[1] = 4;
+		kat[4] = 3;
+		for(int lat: kat)
+			System.out.println(lat + "");
 	}
 }
