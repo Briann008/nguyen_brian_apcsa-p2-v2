@@ -20,21 +20,22 @@ public class Paddle extends Block
 	   super(x,y);
 	   setSpeed(5);
    }
-   public Paddle(int x, int y, int width)
+   public Paddle(int x, int y, int s)
    {
-	   super(x,y,width);
+	   super(x,y);
+	   setSpeed(s);
    }
    public Paddle(int x, int y, int width, int height)
    {
 	   super(x,y,width,height);
 	   setSpeed(5);
    }
-   public Paddle(int x, int y, int width, int height, Color c)
+   public Paddle(int x, int y, int width, int height, int s)
    {
-	   super(x,y,width,height,c);
-	   setSpeed(5);
+	   super(x,y,width,height);
+	   setSpeed(s);
    }
-   public Paddle(int x, int y, int width, int height, Color c, int s)
+   public Paddle(int x, int y, int width, int height, int s, Color c)
    {
 	   super(x,y,width,height,c);
 	   setSpeed(s);
@@ -62,7 +63,6 @@ public class Paddle extends Block
 
    public String toString()
    {
-	   String output = x + " " + y;
-	   return output;
+	   return super.toString() + " " + getSpeed();
    }
 }

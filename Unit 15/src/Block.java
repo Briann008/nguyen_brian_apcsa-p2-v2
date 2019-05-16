@@ -16,10 +16,10 @@ public class Block implements Locatable
 
 	public Block()
 	{
-		setPos(0,0);
-		setWidth(0);
-		setHeight(0);
-		setColor(Color.red);
+		setPos(100,150);
+		setWidth(10);
+		setHeight(10);
+		setColor(Color.black);
 	}
 	
 	public Block(int x, int y)
@@ -27,7 +27,7 @@ public class Block implements Locatable
 		setPos(x,y);
 		setWidth(10);
 		setHeight(10);
-		setColor(Color.red);
+		setColor(Color.black);
 	}
 	
 	public Block(int x, int y, int w)
@@ -35,14 +35,14 @@ public class Block implements Locatable
 		setPos(x,y);
 		setWidth(w);
 		setHeight(10);
-		setColor(Color.red);
+		setColor(Color.black);
 	}
 	public Block(int x, int y, int w, int h)
 	{
 		setPos(x,y);
 		setWidth(w);
 		setHeight(h);
-		setColor(Color.red);
+		setColor(Color.black);
 	}
 	
 	
@@ -51,7 +51,7 @@ public class Block implements Locatable
 	{
 		setPos(x,y);
 		setWidth(w);
-		setHeight(y);
+		setHeight(h);
 		setColor(c);
 	}
 	
@@ -96,14 +96,22 @@ public class Block implements Locatable
 
    public void draw(Graphics window, Color col)
    {
-	   
+	   window.setColor(col);
+	   window.fillRect(getX(), getY(), getWidth(), getHeight());
    }
    
    public boolean equals(Object obj)
    {
+	   if(obj.equals(toString()))
+		   return true;
 	   return false;
    }   
 	
+   
+   public Color getColor()
+   {
+	   return color;
+   }
    public int getWidth() 
    {
 	   return width;
@@ -113,18 +121,21 @@ public class Block implements Locatable
 	   return height;
    }
 	
+   	@Override
 	public int getX()
 	{
 		return xPos;
 	}
+   	@Override
 	public int getY()
 	{
 		return yPos;
 	}
     
+
 	public String toString()
 	{
-		String output = "";
+		String output = getX() + " " + getY() + " " + getWidth() + " " + getHeight() + " " + getColor();	
 		return output;
 	}
 
