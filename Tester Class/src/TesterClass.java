@@ -12,20 +12,9 @@ public class TesterClass
 		}
 }
 
-abstract class Tester
+class Tester
 {
-	public abstract String Cuck();
-	
+	public int x = 10;
+	private int x = 10;
 }
-
-class Test extends Tester
-{
-	@Override
-	public String Cuck()
-	{
-		return "U Cucked me.";
-	}
-
-}
-
 
