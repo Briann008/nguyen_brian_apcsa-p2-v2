@@ -74,10 +74,24 @@ public class PictureTester
   }
   public static void testNegate()
   {
-	  Picture swan = new Picture("src\\images\\beach.jpg");
+	  Picture swan = new Picture("src\\images\\swan.jpg");
 	  swan.explore();
 	  swan.negate();
 	  swan.explore();
+  }
+  public static void testGrayscale()
+  {
+	  Picture swan = new Picture("src\\images\\swan.jpg");
+	  swan.explore();
+	  swan.grayScale();
+	  swan.explore();
+  }
+  public static void testFixUnderwater()
+  {
+	  Picture water = new Picture("src\\images\\water.jpg");
+	  water.explore();
+	  water.FixUnderwater();
+	  water.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -92,8 +106,8 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    testGrayscale();
-    //testFixUnderwater();
+    //testGrayscale();
+    testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();

@@ -156,9 +156,23 @@ public class Picture extends SimplePicture
 		  for(Pixel pixelObj : rowArray)
 		  {
 			  //Need to change
-			  pixelObj.setRed(255-pixelObj.getRed());
-			  pixelObj.setBlue(255-pixelObj.getBlue());
-			  pixelObj.setGreen(255-pixelObj.getGreen());
+			  int gray = ( (pixelObj.getRed()+pixelObj.getBlue()+pixelObj.getGreen()) /3 );
+			  pixelObj.setRed(gray);
+			  pixelObj.setBlue(gray);
+			  pixelObj.setGreen(gray);
+		  }
+	  }
+  }
+  public void FixUnderwater()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for(Pixel[] rowArray : pixels)
+	  {
+		  for(Pixel pixelObj : rowArray)
+		  {
+			  int average = ( (pixelObj.getBlue()+pixelObj.getGreen())/4);
+			  pixelObj.setRed(average);
+			  
 		  }
 	  }
   }
@@ -281,17 +295,11 @@ public class Picture extends SimplePicture
       }
     }
   }
+
   
   
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
-  public static void main(String[] args) 
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
-  }
   
 } // this } is the end of class Picture, put all new methods before this
