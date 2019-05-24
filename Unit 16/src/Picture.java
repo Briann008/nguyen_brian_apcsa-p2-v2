@@ -6,6 +6,8 @@ import java.text.*;
 import java.util.*;
 import java.util.List; // resolves problem with java.awt.List and java.util.List
 
+import javax.tools.ToolProvider;
+
 /**
  * A class that represents a picture.  This class inherits from 
  * SimplePicture and allows the student to add functionality to
@@ -163,17 +165,18 @@ public class Picture extends SimplePicture
 		  }
 	  }
   }
-  public void FixUnderwater()
+  public void fixUnderwater()
   {
 	  Pixel[][] pixels = this.getPixels2D();
 	  for(Pixel[] rowArray : pixels)
 	  {
 		  for(Pixel pixelObj : rowArray)
 		  {
-			  int average = ( (pixelObj.getBlue()+pixelObj.getGreen())/4);
-			  pixelObj.setRed(average);
-			  
+				pixelObj.setRed(pixelObj.getRed() + 75);
+				pixelObj.setBlue(pixelObj.getBlue() - 50);
+				pixelObj.setGreen(pixelObj.getGreen() - 50);
 		  }
+		  
 	  }
   }
   
@@ -195,6 +198,39 @@ public class Picture extends SimplePicture
         rightPixel.setColor(leftPixel.getColor());
       }
     } 
+  }
+  
+  public void mirrorVerticalRightToLeft()
+  {
+	    Pixel[][] pixels = this.getPixels2D();
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int width = pixels[0].length;
+	    for (int row = 0; row < pixels.length; row++)
+	    {
+	      for (int col = 0; col < width / 2; col++)
+	      {
+	    	rightPixel = pixels[row][col];
+	        leftPixel = pixels[row][width - 1 - col];
+	        rightPixel.setColor(leftPixel.getColor());
+	      }
+	    } 
+  }
+  public void mirrorHorizontal()
+  {
+	    Pixel[][] pixels = this.getPixels2D();
+	    Pixel topPixel = null;
+	    Pixel bottomPixel = null;
+	    int width = pixels.length;
+	    for (int row = 0; row < pixels.length / 2; row++)
+	    {
+	      for (int col = 0; col < pixels[0].length; col++)
+	      {
+	    	topPixel = pixels[row][col];
+	    	bottomPixel = pixels[width-1-row][col];
+	    	bottomPixel.setColor(topPixel.getColor());
+	      }
+	    } 
   }
   
   /** Mirror just part of a picture of a temple */
